@@ -69,6 +69,7 @@ public class BookingService {
         Booking booking = PersistenceData.bookingMap.get(bookingId);
         if (booking == null) {
             log.warn("No booking exists for the Booking ID: {}", bookingId);
+            return null;
         }
         log.info("Booking with ID: {} was successfully found.", bookingId);
         return booking;
